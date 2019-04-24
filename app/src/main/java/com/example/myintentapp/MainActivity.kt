@@ -2,6 +2,7 @@ package com.example.myintentapp
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -35,6 +36,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
+        button2.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com"))
+            startActivity(intent)
+        }
+        button3.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.facebook.com"))
+            startActivity(intent)
+        }
+
 
     }
 
